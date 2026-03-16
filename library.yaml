@@ -10,6 +10,104 @@ default_dirs:
     - global: ~/.claude/commands/
 
 library:
-  skills: []
-  agents: []
+  skills:
+    # --- Architecture & Documentation ---
+    - name: adr
+      description: Create Architecture Decision Records following BA ADR process with governance workflow
+      source: /Users/david.oliver/Documents/GitHub/BA-DavidOliver-ObsidianVault/.claude/skills/adr/SKILL.md
+
+    - name: diagram
+      description: Generate architecture diagrams using Python diagrams library — C4, AWS, sequence, flowchart
+      source: https://github.com/DavidROliverBA/Daves-Claude-Code-Skills/blob/main/skills/diagramming/diagram/SKILL.md
+
+    - name: excalidraw-diagram
+      description: Create hand-drawn style Excalidraw diagram JSON files for conceptual visualisations
+      source: /Users/david.oliver/Documents/GitHub/BA-DavidOliver-ObsidianVault/.claude/skills/excalidraw-diagram/SKILL.md
+
+    - name: hld-review
+      description: Evaluate HLD notes against linked ADRs, requirements, and architecture principles across six dimensions
+      source: /Users/david.oliver/Documents/GitHub/BA-DavidOliver-ObsidianVault/.claude/skills/hld-review/SKILL.md
+
+    - name: nfr-capture
+      description: Generate pre-populated NFR table for a system HLD based on tier and project type
+      source: /Users/david.oliver/Documents/GitHub/BA-DavidOliver-ObsidianVault/.claude/skills/nfr-capture/SKILL.md
+
+    # --- Knowledge Management ---
+    - name: refinery
+      description: Six-phase knowledge pipeline — Intake, Transform, Analyse, Compound, Evolve, Reflect
+      source: /Users/david.oliver/Documents/GitHub/BA-DavidOliver-ObsidianVault/.claude/skills/refinery/SKILL.md
+
+    - name: youtube
+      description: Create YouTube reference note with transcript analysis and spawn knowledge nodes
+      source: /Users/david.oliver/Documents/GitHub/BA-DavidOliver-ObsidianVault/.claude/skills/youtube/SKILL.md
+
+    - name: weblink
+      description: Save URL with analysis, summary, and metadata extraction as Reference note
+      source: /Users/david.oliver/Documents/GitHub/BA-DavidOliver-ObsidianVault/.claude/skills/weblink/SKILL.md
+
+    - name: book
+      description: Create Book note with knowledge compounding through spawned Concept/Pattern/Theme nodes
+      source: /Users/david.oliver/Documents/GitHub/BA-DavidOliver-ObsidianVault/.claude/skills/book/SKILL.md
+
+    - name: recall-triage
+      description: Score and classify Recall AI exports by content depth, claim density, and connection potential
+      source: /Users/david.oliver/Documents/GitHub/BA-DavidOliver-ObsidianVault/.claude/skills/recall-triage/SKILL.md
+
+    # --- Daily Operations ---
+    - name: daily
+      description: Create today's daily journal note with tasks, focus areas, and inbox summary
+      source: /Users/david.oliver/Documents/GitHub/BA-DavidOliver-ObsidianVault/.claude/skills/daily/SKILL.md
+
+    - name: meeting
+      description: Create meeting notes with attendees, agenda, and project links from calendar or transcript
+      source: /Users/david.oliver/Documents/GitHub/BA-DavidOliver-ObsidianVault/.claude/skills/meeting/SKILL.md
+
+    - name: task
+      description: Quick-create task with project, priority, and due date
+      source: /Users/david.oliver/Documents/GitHub/BA-DavidOliver-ObsidianVault/.claude/skills/task/SKILL.md
+
+    - name: email
+      description: Process emails into structured notes and draft responses
+      source: /Users/david.oliver/Documents/GitHub/BA-DavidOliver-ObsidianVault/.claude/skills/email/SKILL.md
+
+    # --- Vault Maintenance ---
+    - name: vault-maintenance
+      description: Run comprehensive vault health checks and maintenance tasks
+      source: /Users/david.oliver/Documents/GitHub/BA-DavidOliver-ObsidianVault/.claude/skills/vault-maintenance/SKILL.md
+
+    - name: quality-report
+      description: Generate vault quality metrics and health report
+      source: /Users/david.oliver/Documents/GitHub/BA-DavidOliver-ObsidianVault/.claude/skills/quality-report/SKILL.md
+
+    - name: sync-all
+      description: Cross-repo sync orchestration with sanitisation guards for public repos
+      source: /Users/david.oliver/Documents/GitHub/BA-DavidOliver-ObsidianVault/.claude/skills/sync-all/SKILL.md
+
+    # --- Integrations ---
+    - name: confluence
+      description: Read, analyse, and summarise Confluence pages via Atlassian MCP
+      source: /Users/david.oliver/Documents/GitHub/BA-DavidOliver-ObsidianVault/.claude/skills/confluence/SKILL.md
+
+    - name: cyber-enrich
+      description: Enrich Application Landscape pages with 7-criteria cyber discovery and cross-platform intel
+      source: /Users/david.oliver/Documents/GitHub/BA-DavidOliver-ObsidianVault/.claude/skills/cyber-enrich/SKILL.md
+
+    # --- Meta ---
+    - name: skill-creator
+      description: Create new skills with guided prompts following Agent Skills best practices
+      source: /Users/david.oliver/Documents/GitHub/BA-DavidOliver-ObsidianVault/.claude/skills/skill-creator/SKILL.md
+
+  agents:
+    - name: note-builder
+      description: Execute build tasks and create notes following vault ontology and frontmatter schemas
+      source: /Users/david.oliver/Documents/GitHub/BA-DavidOliver-ObsidianVault/.claude/agents/note-builder.md
+
+    - name: note-validator
+      description: Validate outputs against vault schemas, naming conventions, and quality patterns
+      source: /Users/david.oliver/Documents/GitHub/BA-DavidOliver-ObsidianVault/.claude/agents/note-validator.md
+
+    - name: knowledge-linker
+      description: Suggest missing wiki-links and relatedTo connections across vault notes
+      source: /Users/david.oliver/Documents/GitHub/BA-DavidOliver-ObsidianVault/.claude/agents/knowledge-linker.md
+
   prompts: []
